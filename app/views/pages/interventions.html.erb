@@ -1,0 +1,253 @@
+<body class="smoothscroll enable-animation">
+        <!-- wrapper -->
+    <div id="wrapper">
+       
+            <!-- PAGE HEADER -->
+                <section class="page-header page-header-xlg parallax parallax-4" style = "background-image: url(<%= asset_path("Rocket_Elevator_Assets/Quote/AdobeStock_556688421.jpg") %>)">
+                    <div class="overlay dark-4"><!-- dark overlay [1 to 9 opacity] --></div>
+
+                    <div class="container">
+
+                        <div class="bold font-raleway wow fadeInUp animated">
+                            <h2 class="fs-55 fw-400 text-center">REQUEST AN INTERVENTION</h2>
+                        </div>
+
+                    </div>
+                </section>
+            <!-- /PAGE HEADER -->
+
+<%= form_with(model: @intervention, local: true) do |form| %>
+  <div>
+    <div class="container card card-default card-block">
+          <div class="row">
+            <div  class="col-md-4 ">
+            <%= select_tag "customer", options_from_collection_for_select(Customer.all, "id", "full_name_of_company_contact"), prompt: "Select a customer*", class: "custom-select", style: 'width:250px' %>
+            </div>
+            <div class="hiding col-md-4">
+              <%= select_tag "building", options_from_collection_for_select(Building.all, "id", "id"), prompt: "Select a building ID*", class: "custom-select", style: 'width:250px'%>
+            </div>
+            <div  class="hiding col-md-4">
+                <%= select_tag "battery", options_from_collection_for_select(Battery.all, "id", "id"), prompt: "Select the battery ID*", class: "custom-select", style: 'width:250px'  %>
+            </div>
+          </div>
+          <div class="row">
+            <div class=" hiding col-md-4">
+            <%= select_tag "column", options_from_collection_for_select(Column.all, "id", "id"), prompt: "Select the column", class: "custom-select ", style: 'width:250px' %>
+            </div>
+            <div class="hiding col-md-4">
+             <%= select_tag "elevator", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "Select the elevator", class: "custom-select ",style: 'width:250px' %>
+            </div>
+            <div class=" col-md-4">
+              <%= select_tag "employee", options_from_collection_for_select(Employee.all, "id", "id"), prompt: "Select the Employee", class: "custom-select ", style: 'width:250px'  %>
+           
+            </div>
+          </div>
+          <div class="row hide-description">
+            <div class="col-md-4"><span class="ml-20"><strong>Description *</strong></span></div>
+          </div>
+          <div class="row hide-description">
+            <div class="col-md-12">
+              <textarea id="report" rows="7" cols="100" name="report"></textarea>
+            </div>
+          </div>
+          <div class="actions hide-submit">
+            <%= form.submit "Send the request", class:"btn-primary  text-uppercase" %>
+          </div>
+        </div>
+    
+  </div>
+
+      <% end %>
+  <div>
+        <!-- /wrapper -->
+     <!-- SCROLL TO TOP -->
+   <a href="#" id="toTop"></a>
+</body>
+
+
+
+<script>
+    
+    $(function() {
+
+$("select#building").hide();
+ $("select#battery").hide();
+ $("select#column").hide();
+ $("select#elevator").hide();
+//customer to building
+
+   if ($("select#customer").val() == "") {
+    $("select#building option").remove();
+    var row = "<option value=\"" + "" + "\">" + "Select a building ID*" + "</option>";
+    $(row).appendTo("select#building");
+   }
+   $("select#customer").change(function() {
+    var id_value_string = $(this).val();
+    if (id_value_string == "") {
+      $("select#building").hide();
+      $("select#battery").hide();
+     $("select#column").hide();
+     $("select#elevator").hide();
+     $("select#building option").remove();
+     var row = "<option value=\"" + "" + "\">" + "Select a building ID*" + "</option>";
+     $(row).appendTo("select#building");
+    } 
+    else {
+      $("select#building").show();
+    
+     // Send the request and update buidling dropdown
+     $.ajax({
+      dataType: "json",
+      cache: false,
+      url: '/getBuildingsByCustomer/' + id_value_string,
+      timeout: 5000,
+      error: function(XMLHttpRequest, errorTextStatus, error) {
+       alert("Failed to submit : " + errorTextStatus + " ;" + error);
+      },
+      success: function(data) {
+       // Clear all options from building select
+       $("select#building option").remove();
+       
+       //put in a empty default line
+       var row = "<option value=\"" + "" + "\">" + "Select a building ID*" + "</option>";
+       $(row).appendTo("select#building");
+       // Fill building select
+       $.each(data, function(i, j) {
+        row = "<option value=\"" + j.id + "\">" + j.id + "</option>";
+        console.log(row);
+        $(row).appendTo("select#building");
+       });
+      }
+     });
+    }
+   });
+   
+//building to battery
+    if ($("select#building").val() == "") {
+    $("select#battery option").remove();
+    var row = "<option value=\"" + "" + "\">" + "Select a battery ID*" + "</option>";
+    $(row).appendTo("select#battery");
+   }
+   $("select#building").change(function() {
+    var id_value_string = $(this).val();
+    if (id_value_string == "") {
+      $("select#battery").hide();
+      $("select#column").hide();
+     $("select#elevator").hide();
+     $("select#battery option").remove();
+     var row = "<option value=\"" + "" + "\">" + "Select a battery ID*" + "</option>";
+     $(row).appendTo("select#battery");
+    } else {
+      $("select#battery").show();
+     // Send the request and update buidling dropdown
+     $.ajax({
+      dataType: "json",
+      cache: false,
+      url: '/getBatteriesByBuilding/' + id_value_string,
+      timeout: 5000,
+      error: function(XMLHttpRequest, errorTextStatus, error) {
+       alert("Failed to submit : " + errorTextStatus + " ;" + error);
+      },
+      success: function(data) {
+       // Clear all options from battery select
+          $("select#battery option").remove();
+       //put in a empty default line
+          var row = "<option value=\"" + "" + "\">" + "Select a battery ID*" + "</option>";
+          $(row).appendTo("select#battery");
+       // Fill battery select
+          $.each(data, function(i, j) {
+          row = "<option value=\"" + j.id + "\">" + j.id + "</option>";
+          console.log(row);
+          $(row).appendTo("select#battery");
+       });
+      }
+     });
+    }
+   });
+
+   ///battery to column
+     if ($("select#battery").val() == "") {
+    $("select#column option").remove();
+    var row = "<option value=\"" + "" + "\">" + "Select a column ID*" + "</option>";
+    $(row).appendTo("select#column");
+   }
+   $("select#battery").change(function() {
+    var id_value_string = $(this).val();
+    if (id_value_string == "") {
+      $("select#column").hide();
+     $("select#elevator").hide();
+     $("select#column option").remove();
+     var row = "<option value=\"" + "" + "\">" + "Select a column ID*" + "</option>";
+     $(row).appendTo("select#column");
+    } else {
+      $("select#column").show();
+     // Send the request and update buidling dropdown
+     $.ajax({
+      dataType: "json",
+      cache: false,
+      url: '/getColumnsByBattery/' + id_value_string,
+      timeout: 5000,
+      error: function(XMLHttpRequest, errorTextStatus, error) {
+       alert("Failed to submit : " + errorTextStatus + " ;" + error);
+      },
+      success: function(data) {
+       // Clear all options from column select
+        $("select#column option").remove();
+       //put in a empty default line
+        var row = "<option value=\"" + "" + "\">" + "Select a column ID*" + "</option>";
+        $(row).appendTo("select#column");
+       // Fill column select
+        $.each(data, function(i, j) {
+        row = "<option value=\"" + j.id + "\">" + j.id + "</option>";
+        console.log(row);
+        $(row).appendTo("select#column");
+       });
+      }
+     });
+    }
+   });
+
+   //column to elevator
+ if ($("select#column").val() == "") {
+    $("select#elevator option").remove();
+    var row = "<option value=\"" + "" + "\">" + "Select a elevator ID*" + "</option>";
+    $(row).appendTo("select#elevator");
+   }
+   $("select#column").change(function() {
+    var id_value_string = $(this).val();
+    if (id_value_string == "") {
+      $("select#elevator").hide();
+     $("select#elevator option").remove();
+     var row = "<option value=\"" + "" + "\">" + "Select a columelevatorn ID*" + "</option>";
+     $(row).appendTo("select#elevator");
+    } else {
+     $("select#elevator").show();
+     // Send the request and update buidling dropdown
+     $.ajax({
+      dataType: "json",
+      cache: false,
+      url: '/getElevatorsByColumn/' + id_value_string,
+      timeout: 5000,
+      error: function(XMLHttpRequest, errorTextStatus, error) {
+       alert("Failed to submit : " + errorTextStatus + " ;" + error);
+      },
+      success: function(data) {
+       // Clear all options from elevator select
+          $("select#elevator option").remove();
+       //put in a empty default line
+          var row = "<option value=\"" + "" + "\">" + "Select a elevator ID*" + "</option>";
+          $(row).appendTo("select#elevator");
+       // Fill elevator select
+          $.each(data, function(i, j) {
+          row = "<option value=\"" + j.id + "\">" + j.id + "</option>";
+          $(row).appendTo("select#elevator");
+       });
+      }
+     });
+    }
+   });
+   
+
+  });
+
+</script>
