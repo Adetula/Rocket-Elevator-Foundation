@@ -1,13 +1,17 @@
-Rocket_Elevators_Information_System
-🚀	Working with MVC (Model-View-Controller)	📈
+Rocket-Elevator-Foundation
+🚀	Consolidation	📈
 
 Members of this week's team
-Kaelen Burroughs -
-Ahsan Syed -
-Cristiane Santiago -
+
 Olaolu Adetula -
  
 🎯 About
+
+Week 9 in CodeBoxx is the consolidation week where all that we have learnt in the weeks below was tested: 
+
+Please note that I handled Zendesk for my team 2 weeks ago so I could not handle it this week as my trial perod had expired.
+
+
 Week 4 - The main goal of this week is to transform the static site previously developed during the Genesis program and turn it into a web application on MVC (Model - View - Controller) foundations. The site must be in a state that allows you to create a new section that saves the Javascript form that calculates an estimate in the form of a purchase order.
 Expanding the relational database model
 Seeding data base with data NB: real address are used
@@ -81,27 +85,7 @@ To login as Employee:
 
 📚 The three queries:
 
---How many contact requests are made per month?
-
-SELECT to_char(creation_date, 'YYYY-MM') as "Month"
-      ,count(contact_id) as ContactPerMonth
-  FROM public.fact_contacts
- group by "Month"
- order by "Month" desc;
-
---How many bid solicitations are made per month?
-
-SELECT to_char(creation_date, 'YYYY-MM') as "Month"
-      ,count(quote_id) as QuotePerMonth
-  FROM public.fact_quotes
- group by "Month"
- order by "Month" desc;
-
---How many elevators per customer do we have?
-
- SELECT customer_id as "Customer", count(id) as ElevPerCustomers
-  FROM public.fact_elevators
- group by "Customer";
+REST API queries- https://rocket-elevator-api.azurewebsites.net/api/Interventions
 
 API Info
 
