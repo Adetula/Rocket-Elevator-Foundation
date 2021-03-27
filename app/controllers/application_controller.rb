@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery prepend: false, with: :exception      
+    # protect_from_forgery prepend: false, with: :exception      
     # skip_before_action :verify_authenticity_token
     
     # Probably add more here to restrict users from directly accessing the back-office
