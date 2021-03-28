@@ -69,7 +69,7 @@ class LeadsController < ApplicationController
             sendGrid_email_sender()
         end 
         
-       
+    end   
      #===================================================================================================
      # DEFINING @lead = Lead.new(lead_params) BELOW:
      #===================================================================================================
