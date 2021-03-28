@@ -21,7 +21,7 @@ Two types of databases will be requested for this exercise
 a- A relational database
 b- A data warehouse for decision-making
 
-Week 7 - This week, the task set to us is to integrate 7 different APIs into the Rocket Elevators website. those APIs include:
+Week 9 - This week, the task set to us is to integrate 7 different APIs into the Rocket Elevators website. those APIs include:
 1. Google Maps
 2. Twilio
 3. Slack
@@ -63,24 +63,7 @@ To login as Employee:
 16. gem 'ibm_watson'
 
 
-📌 The queries in mysql:
-1. Employee
-2. Users
-3. Quote
-4. Address
-5. Battery
-6. Building
-7. Building Details (Extention Building)
-8. Column
-9. Customer
-10. Elevator
-11. Lead
 
-📌 The queries in postgres:
-1. Fact Quote
-2. Fact Contact
-3. Fact Elevator
-4. Dim Customer
 
 
 📚 The three queries:
@@ -112,7 +95,7 @@ API Info
 
 4. DropBox
 
-    The DropBox API uses the dropbox_api gem as well as the DropBox App that was created to move and store files assiciated to a customer whenever the specific customer is updated or created. It does so by comparing the customers email address to the adresses of the leads, and if they match it creates a directory using the customer contact name for it and sends the file to dropbox if it isn't already there, and deletes the file from the MySQL database. The files can be viewed here: https://www.dropbox.com/home/Apps/Rocket%20Elevators%20API%20Team%203. After clicking the link, you should be able to view all the directories created by the DropBox API. If for whatever reason this link does not work, the account email is burroughsdevtest@gmail.com, and the password is Codeboxx1! . The file path to the files is then Apps/Rocket Elevators API Team 3/.
+    The DropBox API uses the dropbox_api gem as well as the DropBox App that was created to move and store files assiciated to a customer whenever the specific customer is updated or created. It does so by comparing the customers email address to the adresses of the leads, and if they match it creates a directory using the customer contact name for it and sends the file to dropbox if it isn't already there, and deletes the file from the MySQL database. The files can be viewed here: https://www.dropbox.com/home/Apps/RocketElevatorsOla After clicking the link, you should be able to view all the directories created by the DropBox API. If for whatever reason this link does not work, the account email is burroughsdevtest@gmail.com, and the password is Codeboxx1! . The file path to the files is then Apps/Rocket Elevators API Team 3/.
 
 5. SendGrid
 
