@@ -1,13 +1,17 @@
-Rocket_Elevators_Information_System
-🚀	Working with MVC (Model-View-Controller)	📈
+Rocket-Elevator-Foundation
+🚀	Consolidation	📈
 
 Members of this week's team
-Kaelen Burroughs -
-Ahsan Syed -
-Cristiane Santiago -
+
 Olaolu Adetula -
  
 🎯 About
+
+Week 9 in CodeBoxx is the consolidation week where all that we have learnt in the weeks below was tested: 
+
+Please note that I handled Zendesk for my team 2 weeks ago so I could not handle it this week as my trial perod had expired.
+
+
 Week 4 - The main goal of this week is to transform the static site previously developed during the Genesis program and turn it into a web application on MVC (Model - View - Controller) foundations. The site must be in a state that allows you to create a new section that saves the Javascript form that calculates an estimate in the form of a purchase order.
 Expanding the relational database model
 Seeding data base with data NB: real address are used
