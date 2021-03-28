@@ -85,11 +85,7 @@ To login as Employee:
 
 📚 The three queries:
 
-REST API queries- https://rocket-api-burst.azurewebsites.net//api/interventions
-
-REST API git - https://github.com/Adetula/Rocket_Elevators_API
-
-Postman link- https://app.getpostman.com/join-team?invite_code=fa798e97463863bf0ae7706c4d727181
+REST API queries- https://rocket-elevator-api.azurewebsites.net/api/Interventions
 
 API Info
 
