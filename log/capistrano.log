@@ -3326,3 +3326,276 @@ autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329145401/app/assets
  DEBUG [a6634c0b] Command: cd /home/ubuntu/apps/MuyiwaAdetula/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.state -F /home/ubuntu/apps/MuyiwaAdetula/shared/puma.rb restart )
  DEBUG [a6634c0b] 	Command restart sent success
   INFO [a6634c0b] Finished in 1.696 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2021-03-29 13:19:46 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bc387800] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/ as ubuntu@99.79.123.96
+ DEBUG [bc387800] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/
+  INFO [bc387800] Finished in 0.846 seconds with exit status 0 (successful).
+ DEBUG Uploading /Users/mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 0.0%
+  INFO Uploading /Users/mac/.rbenv/versions/2.6.6/lib/ruby/gems/2.6.0/gems/rvm1-capistrano3-1.4.0/script/rvm-auto.sh 100.0%
+  INFO [92078d0b] Running /usr/bin/env chmod +x /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh as ubuntu@99.79.123.96
+ DEBUG [92078d0b] Command: /usr/bin/env chmod +x /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh
+  INFO [92078d0b] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [dbf08dfe] Running /usr/bin/env mkdir -p /tmp as ubuntu@99.79.123.96
+ DEBUG [dbf08dfe] Command: /usr/bin/env mkdir -p /tmp
+  INFO [dbf08dfe] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-c1a62c15e53de0a9ca80.sh 0.0%
+  INFO Uploading /tmp/git-ssh-c1a62c15e53de0a9ca80.sh 100.0%
+  INFO [6a203645] Running /usr/bin/env chmod 700 /tmp/git-ssh-c1a62c15e53de0a9ca80.sh as ubuntu@99.79.123.96
+ DEBUG [6a203645] Command: /usr/bin/env chmod 700 /tmp/git-ssh-c1a62c15e53de0a9ca80.sh
+  INFO [6a203645] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [9bc78452] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/repo/HEAD ] as ubuntu@99.79.123.96
+ DEBUG [9bc78452] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/repo/HEAD ]
+ DEBUG [9bc78452] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/apps/MuyiwaAdetula/repo
+ DEBUG [9bb57ad5] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [9bb57ad5] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi
+ DEBUG [9bb57ad5] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [dc6438d6] Running /usr/bin/env git remote set-url origin https://github.com/Adetula/Rocket-Elevator-Foundation.git as ubuntu@99.79.123.96
+ DEBUG [dc6438d6] Command: cd /home/ubuntu/apps/MuyiwaAdetula/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env git remote set-url origin https://github.com/Adetula/Rocket-Elevator-Foundation.git )
+  INFO [dc6438d6] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [b79d17be] Running /usr/bin/env git remote update --prune as ubuntu@99.79.123.96
+ DEBUG [b79d17be] Command: cd /home/ubuntu/apps/MuyiwaAdetula/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b79d17be] 	Fetching origin
+ DEBUG [b79d17be] 	From https://github.com/Adetula/Rocket-Elevator-Foundation
+   1d072368..99080a98  master     -> master
+  INFO [b79d17be] Finished in 0.677 seconds with exit status 0 (successful).
+ DEBUG [4404d1a8] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [4404d1a8] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi
+ DEBUG [4404d1a8] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [98ec2456] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 as ubuntu@99.79.123.96
+ DEBUG [98ec2456] Command: cd /home/ubuntu/apps/MuyiwaAdetula/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 )
+  INFO [98ec2456] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [f0217572] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 as ubuntu@99.79.123.96
+ DEBUG [f0217572] Command: cd /home/ubuntu/apps/MuyiwaAdetula/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 )
+  INFO [f0217572] Finished in 1.980 seconds with exit status 0 (successful).
+ DEBUG [f3c808af] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [f3c808af] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/repo; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/repo'" 1>&2; false; fi
+ DEBUG [f3c808af] Finished in 0.116 seconds with exit status 0 (successful).
+ DEBUG [6445c3f6] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@99.79.123.96
+ DEBUG [6445c3f6] Command: cd /home/ubuntu/apps/MuyiwaAdetula/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [6445c3f6] 	99080a98050569e7b3d44e0cadba34b650719c59
+ DEBUG [6445c3f6] Finished in 0.124 seconds with exit status 0 (successful).
+ DEBUG [78ccada7] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [78ccada7] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [78ccada7] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [3866a406] Running /usr/bin/env echo "99080a98050569e7b3d44e0cadba34b650719c59" > REVISION as ubuntu@99.79.123.96
+ DEBUG [3866a406] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env echo "99080a98050569e7b3d44e0cadba34b650719c59" > REVISION
+  INFO [3866a406] Finished in 0.160 seconds with exit status 0 (successful).
+  INFO [d0ed1068] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config as ubuntu@99.79.123.96
+ DEBUG [d0ed1068] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config
+  INFO [d0ed1068] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [2460e538] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [2460e538] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml ]
+ DEBUG [2460e538] Finished in 0.206 seconds with exit status 1 (failed).
+ DEBUG [34fdccc3] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [34fdccc3] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml ]
+ DEBUG [34fdccc3] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [48ce4e8e] Running /usr/bin/env rm /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml as ubuntu@99.79.123.96
+ DEBUG [48ce4e8e] Command: /usr/bin/env rm /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml
+  INFO [48ce4e8e] Finished in 0.202 seconds with exit status 0 (successful).
+  INFO [faf75250] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/config/database.yml /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml as ubuntu@99.79.123.96
+ DEBUG [faf75250] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/config/database.yml /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/database.yml
+  INFO [faf75250] Finished in 0.136 seconds with exit status 0 (successful).
+ DEBUG [c8786443] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [c8786443] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml ]
+ DEBUG [c8786443] Finished in 0.162 seconds with exit status 1 (failed).
+ DEBUG [26890498] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [26890498] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml ]
+ DEBUG [26890498] Finished in 0.097 seconds with exit status 0 (successful).
+  INFO [179ab956] Running /usr/bin/env rm /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml as ubuntu@99.79.123.96
+ DEBUG [179ab956] Command: /usr/bin/env rm /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml
+  INFO [179ab956] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [2b39b6e1] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/config/application.yml /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml as ubuntu@99.79.123.96
+ DEBUG [2b39b6e1] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/config/application.yml /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/config/application.yml
+  INFO [2b39b6e1] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [45991208] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public as ubuntu@99.79.123.96
+ DEBUG [45991208] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public
+  INFO [45991208] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [684b121e] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [684b121e] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids ]
+ DEBUG [684b121e] Finished in 0.068 seconds with exit status 1 (failed).
+ DEBUG [99e3e852] Running [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids ] as ubuntu@99.79.123.96
+ DEBUG [99e3e852] Command: [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids ]
+ DEBUG [99e3e852] Finished in 0.108 seconds with exit status 1 (failed).
+  INFO [3175abba] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids as ubuntu@99.79.123.96
+ DEBUG [3175abba] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/pids
+  INFO [3175abba] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [aeb6672e] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [aeb6672e] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets ]
+ DEBUG [aeb6672e] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [04066db8] Running [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets ] as ubuntu@99.79.123.96
+ DEBUG [04066db8] Command: [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets ]
+ DEBUG [04066db8] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [ebe15f7f] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/sockets /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets as ubuntu@99.79.123.96
+ DEBUG [ebe15f7f] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/sockets /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/tmp/sockets
+  INFO [ebe15f7f] Finished in 0.109 seconds with exit status 0 (successful).
+ DEBUG [92964736] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log ] as ubuntu@99.79.123.96
+ DEBUG [92964736] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log ]
+ DEBUG [92964736] Finished in 0.069 seconds with exit status 1 (failed).
+ DEBUG [4c6a2467] Running [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log ] as ubuntu@99.79.123.96
+ DEBUG [4c6a2467] Command: [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log ]
+ DEBUG [4c6a2467] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [4b5dab02] Running /usr/bin/env rm -rf /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log as ubuntu@99.79.123.96
+ DEBUG [4b5dab02] Command: /usr/bin/env rm -rf /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log
+  INFO [4b5dab02] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [3d0ddfb2] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/log /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log as ubuntu@99.79.123.96
+ DEBUG [3d0ddfb2] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/log /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/log
+  INFO [3d0ddfb2] Finished in 0.113 seconds with exit status 0 (successful).
+ DEBUG [2ba132c9] Running [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [2ba132c9] Command: [ -L /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets ]
+ DEBUG [2ba132c9] Finished in 0.065 seconds with exit status 1 (failed).
+ DEBUG [cfe1bec1] Running [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets ] as ubuntu@99.79.123.96
+ DEBUG [cfe1bec1] Command: [ -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets ]
+ DEBUG [cfe1bec1] Finished in 0.108 seconds with exit status 1 (failed).
+  INFO [a6b3f75c] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/public/assets /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets as ubuntu@99.79.123.96
+ DEBUG [a6b3f75c] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/shared/public/assets /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets
+  INFO [a6b3f75c] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [2aa34704] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [2aa34704] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [2aa34704] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [3a6c17af] Running /usr/bin/env /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh rvm --install install . as ubuntu@99.79.123.96
+ DEBUG [3a6c17af] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh rvm --install install .
+ DEBUG [3a6c17af] 	Warning, new version of rvm available '1.29.12', you are using older version '1.29.9'.
+You can disable this warning with:   echo rvm_autoupdate_flag=0 >> ~/.rvmrc
+You can enable auto-update with:     echo rvm_autoupdate_flag=2 >> ~/.rvmrc
+You can update manually with:        rvm get VERSION                         (e.g. 'rvm get stable')
+
+ DEBUG [3a6c17af] 	Already installed ruby-2.6.6.
+To reinstall use:
+
+    rvm reinstall ruby-2.6.6
+
+  INFO [3a6c17af] Finished in 0.503 seconds with exit status 0 (successful).
+  INFO [5939eabe] Running /usr/bin/env git ls-remote https://github.com/Adetula/Rocket-Elevator-Foundation.git HEAD as ubuntu@99.79.123.96
+ DEBUG [5939eabe] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-c1a62c15e53de0a9ca80.sh" ; /usr/bin/env git ls-remote https://github.com/Adetula/Rocket-Elevator-Foundation.git HEAD )
+ DEBUG [5939eabe] 	99080a98050569e7b3d44e0cadba34b650719c59	HEAD
+  INFO [5939eabe] Finished in 0.263 seconds with exit status 0 (successful).
+  INFO [8008449e] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared /home/ubuntu/apps/MuyiwaAdetula/releases as ubuntu@99.79.123.96
+ DEBUG [8008449e] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared /home/ubuntu/apps/MuyiwaAdetula/releases
+  INFO [8008449e] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [1c1c2546] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/sockets /home/ubuntu/apps/MuyiwaAdetula/shared/log /home/ubuntu/apps/MuyiwaAdetula/shared/public/assets as ubuntu@99.79.123.96
+ DEBUG [1c1c2546] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/sockets /home/ubuntu/apps/MuyiwaAdetula/shared/log /home/ubuntu/apps/MuyiwaAdetula/shared/public/assets
+  INFO [1c1c2546] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [b97f0d6f] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared/config as ubuntu@99.79.123.96
+ DEBUG [b97f0d6f] Command: /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/shared/config
+  INFO [b97f0d6f] Finished in 0.073 seconds with exit status 0 (successful).
+ DEBUG [4abe1c1c] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/config/database.yml ] as ubuntu@99.79.123.96
+ DEBUG [4abe1c1c] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/config/database.yml ]
+ DEBUG [4abe1c1c] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [e18a16cd] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/config/application.yml ] as ubuntu@99.79.123.96
+ DEBUG [e18a16cd] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/config/application.yml ]
+ DEBUG [e18a16cd] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [4c7e53fd] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/puma.rb ] as ubuntu@99.79.123.96
+ DEBUG [4c7e53fd] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/puma.rb ]
+ DEBUG [4c7e53fd] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [1f67b0dd] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/REVISION ] as ubuntu@99.79.123.96
+ DEBUG [1f67b0dd] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/REVISION ]
+ DEBUG [1f67b0dd] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [716e121d] Running /usr/bin/env cat /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/REVISION 2>/dev/null as ubuntu@99.79.123.96
+ DEBUG [716e121d] Command: /usr/bin/env cat /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/REVISION 2>/dev/null
+ DEBUG [716e121d] 	99080a98050569e7b3d44e0cadba34b650719c59
+ DEBUG [716e121d] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG [6cb999a9] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [6cb999a9] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [6cb999a9] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [266fd45b] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local deployment true as ubuntu@99.79.123.96
+ DEBUG [266fd45b] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local deployment true
+  INFO [266fd45b] Finished in 1.047 seconds with exit status 0 (successful).
+  INFO [ce82638a] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/MuyiwaAdetula/shared/bundle as ubuntu@99.79.123.96
+ DEBUG [ce82638a] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local path /home/ubuntu/apps/MuyiwaAdetula/shared/bundle
+  INFO [ce82638a] Finished in 1.015 seconds with exit status 0 (successful).
+  INFO [24ef39b5] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local without production as ubuntu@99.79.123.96
+ DEBUG [24ef39b5] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle config --local without production
+  INFO [24ef39b5] Finished in 1.039 seconds with exit status 0 (successful).
+ DEBUG [5a217ed2] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [5a217ed2] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [5a217ed2] Finished in 0.068 seconds with exit status 0 (successful).
+ DEBUG [9e842f0a] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle check as ubuntu@99.79.123.96
+ DEBUG [9e842f0a] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle check
+ DEBUG [9e842f0a] 	Warning: the running version of Bundler (2.2.11) is older than the version that created the lockfile (2.2.15). We suggest you to upgrade to the version that created the lockfile by running `gem install bundler:2.2.15`.
+ DEBUG [9e842f0a] 	The Gemfile's dependencies are satisfied
+ DEBUG [9e842f0a] Finished in 1.201 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [652fe76b] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [652fe76b] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [652fe76b] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [13250acc] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile as ubuntu@99.79.123.96
+ DEBUG [13250acc] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && ( export RAILS_ENV="development" RAILS_GROUPS="" ; /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec rake assets:precompile )
+ DEBUG [13250acc] 	WARNING: Use strings for Figaro configuration. 123456 was converted to "123456".
+ DEBUG [13250acc] 	autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/application.scss:26669:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/application.scss:32533:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/application.scss:32546:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+ DEBUG [13250acc] 	autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/essentials.scss:3616:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/essentials.scss:3629:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+ DEBUG [13250acc] 	autoprefixer: /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/app/assets/stylesheets/settings.scss:1550:3: Gradient has outdated direction syntax. New syntax is like `to left` instead of `right`.
+ DEBUG [13250acc] 	I, [2021-03-29T17:21:04.884720 #10923]  INFO -- : Writing /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/application-4aff29abd15fe9fa84941be8844dc82485c0d877ca8ec081fe4d69c1b675968f.css
+ DEBUG [13250acc] 	I, [2021-03-29T17:21:04.885198 #10923]  INFO -- : Writing /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/application-4aff29abd15fe9fa84941be8844dc82485c0d877ca8ec081fe4d69c1b675968f.css.gz
+  INFO [13250acc] Finished in 66.732 seconds with exit status 0 (successful).
+ DEBUG [838c3a7d] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [838c3a7d] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [838c3a7d] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [37fed436] Running /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [37fed436] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env mkdir -p /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/assets_manifest_backup
+  INFO [37fed436] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [3c494f7f] Running /usr/bin/env ls /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [3c494f7f] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env ls /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest*
+ DEBUG [3c494f7f] 	/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest-70f86dc618a95cb601f1eff218b7a760.json
+ DEBUG [3c494f7f] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [ee4959f3] Running /usr/bin/env ls /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest* as ubuntu@99.79.123.96
+ DEBUG [ee4959f3] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env ls /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest*
+ DEBUG [ee4959f3] 	/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest-70f86dc618a95cb601f1eff218b7a760.json
+ DEBUG [ee4959f3] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [2b61d301] Running /usr/bin/env cp /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest-70f86dc618a95cb601f1eff218b7a760.json /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/assets_manifest_backup as ubuntu@99.79.123.96
+ DEBUG [2b61d301] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && /usr/bin/env cp /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/public/assets/.sprockets-manifest-70f86dc618a95cb601f1eff218b7a760.json /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948/assets_manifest_backup
+  INFO [2b61d301] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [af5eed8f] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [af5eed8f] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948'" 1>&2; false; fi
+ DEBUG [af5eed8f] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [7ab0c417] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate as ubuntu@99.79.123.96
+ DEBUG [7ab0c417] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 && ( export RAILS_ENV="development" ; /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec rake db:migrate )
+ DEBUG [7ab0c417] 	WARNING: Use strings for Figaro configuration. 123456 was converted to "123456".
+  INFO [7ab0c417] Finished in 4.886 seconds with exit status 0 (successful).
+  INFO [71737899] Running /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 /home/ubuntu/apps/MuyiwaAdetula/releases/current as ubuntu@99.79.123.96
+ DEBUG [71737899] Command: /usr/bin/env ln -s /home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948 /home/ubuntu/apps/MuyiwaAdetula/releases/current
+  INFO [71737899] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [6da1970e] Running /usr/bin/env mv /home/ubuntu/apps/MuyiwaAdetula/releases/current /home/ubuntu/apps/MuyiwaAdetula as ubuntu@99.79.123.96
+ DEBUG [6da1970e] Command: /usr/bin/env mv /home/ubuntu/apps/MuyiwaAdetula/releases/current /home/ubuntu/apps/MuyiwaAdetula
+  INFO [6da1970e] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [f6550a8e] Running /usr/bin/env ls -x /home/ubuntu/apps/MuyiwaAdetula/releases as ubuntu@99.79.123.96
+ DEBUG [f6550a8e] Command: /usr/bin/env ls -x /home/ubuntu/apps/MuyiwaAdetula/releases
+ DEBUG [f6550a8e] 	20210328014935	20210329142734	20210329143157	20210329144040	20210329145401
+20210329171948
+ DEBUG [f6550a8e] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 99.79.123.96
+ DEBUG [d50553a6] Running [ -d /home/ubuntu/apps/MuyiwaAdetula/current ] as ubuntu@99.79.123.96
+ DEBUG [d50553a6] Command: [ -d /home/ubuntu/apps/MuyiwaAdetula/current ]
+ DEBUG [d50553a6] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [263390c2] Running /usr/bin/env readlink /home/ubuntu/apps/MuyiwaAdetula/current as ubuntu@99.79.123.96
+ DEBUG [263390c2] Command: /usr/bin/env readlink /home/ubuntu/apps/MuyiwaAdetula/current
+ DEBUG [263390c2] 	/home/ubuntu/apps/MuyiwaAdetula/releases/20210329171948
+ DEBUG [263390c2] Finished in 0.115 seconds with exit status 0 (successful).
+  INFO [d3ce65cc] Running /usr/bin/env rm -rf /home/ubuntu/apps/MuyiwaAdetula/releases/20210328014935 as ubuntu@99.79.123.96
+ DEBUG [d3ce65cc] Command: /usr/bin/env rm -rf /home/ubuntu/apps/MuyiwaAdetula/releases/20210328014935
+  INFO [d3ce65cc] Finished in 1.758 seconds with exit status 0 (successful).
+ DEBUG [a1af27d7] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [a1af27d7] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/releases; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/releases'" 1>&2; false; fi
+ DEBUG [a1af27d7] Finished in 0.117 seconds with exit status 0 (successful).
+  INFO [66b8b017] Running /usr/bin/env echo "Branch master (at 99080a98050569e7b3d44e0cadba34b650719c59) deployed as release 20210329171948 by mac" >> /home/ubuntu/apps/MuyiwaAdetula/revisions.log as ubuntu@99.79.123.96
+ DEBUG [66b8b017] Command: cd /home/ubuntu/apps/MuyiwaAdetula/releases && /usr/bin/env echo "Branch master (at 99080a98050569e7b3d44e0cadba34b650719c59) deployed as release 20210329171948 by mac" >> /home/ubuntu/apps/MuyiwaAdetula/revisions.log
+  INFO [66b8b017] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [20d195ff] Running if test ! -d /home/ubuntu/apps/MuyiwaAdetula/current; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/current'" 1>&2; false; fi as ubuntu@99.79.123.96
+ DEBUG [20d195ff] Command: if test ! -d /home/ubuntu/apps/MuyiwaAdetula/current; then echo "Directory does not exist '/home/ubuntu/apps/MuyiwaAdetula/current'" 1>&2; false; fi
+ DEBUG [20d195ff] Finished in 0.142 seconds with exit status 0 (successful).
+ DEBUG [032e75fa] Running [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.pid ] as ubuntu@99.79.123.96
+ DEBUG [032e75fa] Command: [ -f /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.pid ]
+ DEBUG [032e75fa] Finished in 0.085 seconds with exit status 0 (successful).
+ DEBUG [331bcdb1] Running /usr/bin/env kill -0 $( cat /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.pid ) as ubuntu@99.79.123.96
+ DEBUG [331bcdb1] Command: cd /home/ubuntu/apps/MuyiwaAdetula/current && ( export RACK_ENV="development" ; /usr/bin/env kill -0 $( cat /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.pid ) )
+ DEBUG [331bcdb1] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [61cd8906] Running /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.state -F /home/ubuntu/apps/MuyiwaAdetula/shared/puma.rb restart as ubuntu@99.79.123.96
+ DEBUG [61cd8906] Command: cd /home/ubuntu/apps/MuyiwaAdetula/current && ( export RACK_ENV="development" ; /home/ubuntu/apps/MuyiwaAdetula/rvm1scripts/rvm-auto.sh . bundle exec pumactl -S /home/ubuntu/apps/MuyiwaAdetula/shared/tmp/pids/puma.state -F /home/ubuntu/apps/MuyiwaAdetula/shared/puma.rb restart )
+ DEBUG [61cd8906] 	Command restart sent success
+  INFO [61cd8906] Finished in 1.465 seconds with exit status 0 (successful).
