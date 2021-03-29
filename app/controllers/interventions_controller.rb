@@ -1,5 +1,9 @@
 class InterventionsController < ApplicationController
   before_action :set_intervention, only: %i[ show edit update destroy ]
+  authenticate :user, ->(user) {user.admin?} do
+    get '/intervention' => 'interventions#interventions'
+  end
+
 
   def getBuildingsByCustomer
       @customer_id = params[:customer_id]
