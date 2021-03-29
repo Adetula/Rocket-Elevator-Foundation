@@ -1,6 +1,13 @@
 class InterventionsController < ApplicationController
   before_action :set_intervention, only: %i[ show edit update destroy ]
-
+  before_action :require_login
+    # Restricting action only to log in users with authorisation
+    def require_login
+        if !current_user
+          flash[:error] = "You must be logged in to access this section"
+          redirect_to main_app.root_path # halts request cycle
+        end
+      end
 
   def getBuildingsByCustomer
       @customer_id = params[:customer_id]
