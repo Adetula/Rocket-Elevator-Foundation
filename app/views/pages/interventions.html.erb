@@ -38,7 +38,7 @@
              <%= select_tag "elevator", options_from_collection_for_select(Elevator.all, "id", "id"), prompt: "Select the elevator", class: "custom-select ",style: 'width:250px' %>
             </div>
             <div class=" col-md-4">
-              <%= select_tag "employee", options_from_collection_for_select(Employee.all, "id", "id"), prompt: "Select the Employee", class: "custom-select ", style: 'width:250px'  %>
+              <%= select_tag "employee", options_from_collection_for_select(Employee.all, "id", "first_name"), prompt: "Select the Employee", class: "custom-select ", style: 'width:250px'  %>
            
             </div>
           </div>
